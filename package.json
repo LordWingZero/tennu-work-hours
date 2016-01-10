@@ -1,7 +1,7 @@
 {
   "name": "tennu-work-hours",
   "private": true,
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Calculated the next time I work. Accounts for MSUs Federal holida schedule.",
   "main": "plugin.js",
   "repository": {
