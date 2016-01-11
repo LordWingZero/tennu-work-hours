@@ -3,8 +3,8 @@ var format = require("util").format;
 var calendar = require('./lib/calendar');
 
 var TennuWorkHours = {
-    configDefaults:  {
-        "work-hours":{
+    configDefaults: {
+        "work-hours": {
             "hour": 7,
             "minute": 30,
             "second": 0
@@ -27,12 +27,12 @@ var TennuWorkHours = {
                     'minute': client.config("work-hours").minute,
                     'second': client.config("work-hours").second,
                 });
-                
+
                 var nickname = IRCMessage.nickname;
-                if(IRCMessage.args[0] && IRCMessage.args[0].indexOf('@') > -1){
+                if (IRCMessage.args[0] && IRCMessage.args[0].indexOf('@') > -1) {
                     nickname = IRCMessage.args[0].replace('@', '');
                 }
-                
+
                 return format('%s, you work in about %s.', nickname, nextBusinessDay.from(moment()));
             });
         }
